@@ -8,7 +8,7 @@ wget http://docker.demo-varnish:8000/working/duration
 echo
 echo ==================================================
 echo Wait a little
-sleep 10
+sleep 5
 
 echo
 echo ==================================================

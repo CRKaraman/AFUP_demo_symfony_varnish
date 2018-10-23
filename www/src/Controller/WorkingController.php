@@ -18,6 +18,7 @@ class WorkingController extends AbstractController
             '<html><body>Working during: '.$number.' seconds</body></html>'
         );
         $response->setSharedMaxAge(15);
+        $response->setMaxAge(15);
 
         return $response;
     }

@@ -24,9 +24,9 @@ class EsiController extends AbstractController
     public function displayName()
     {
         //get the name in session or in DB
-        //sleep(3);
-        $response = new Response('Name: Nicolas L. - generated at: '.date('H:i:s'));
-        $response->setSharedMaxAge(2);
+        sleep(3);
+        $response = new Response('Name: Nicolas L. - generated at: '.date('h:i:s'));
+        $response->setSharedMaxAge(5);
 
         return $response;
     }
