@@ -1,0 +1,23 @@
+<html>
+<head>
+    <style>
+        div { padding: 5px; margin: 1px 0; }
+        .random-twig { background: grey; }
+        .random-controller { background: #3333dd; color: #eeeeee }
+        .esi { background: black; color: #cccccc; }
+    </style>
+</head>
+<body>
+    <div class="random-twig">
+        Random in twig: {{ random(100) }}
+    </div>
+
+    <div class="random-controller">
+        The random number of the controller: {{ number }}
+    </div>
+
+    <div class="esi">
+        {{ render_esi(url('esi_name')) }}
+    </div>
+</body>
+</html>

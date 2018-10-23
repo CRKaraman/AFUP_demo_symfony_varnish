@@ -1,0 +1,23 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx/config/conf.d:/etc/nginx/conf.d
+      - ./www:/var/www/html
+    ports:
+      - 8000:81
+  phpfpm:
+    image: php:7.2-fpm-alpine
+    volumes:
+      - ./www:/var/www/html
+    ports:
+      - 9000 
+  varnish:
+    image: cloudposse/varnish
+    volumes:
+      - ./varnish/default.vcl:/etc/varnish/configs/default.vcl
+    ports:
+      - 80:80
+
+volumes: {}

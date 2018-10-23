@@ -1,0 +1,15 @@
+index:
+    path: /
+    controller: App\Controller\WorkingController::duration
+
+working_duration:
+    path: /working/duration
+    controller: App\Controller\WorkingController::duration
+
+esi_example:
+    path: /esi/example
+    controller: App\Controller\EsiController::example
+
+esi_name:
+    path: /esi/display-name
+    controller: App\Controller\EsiController::displayName
